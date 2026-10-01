@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste de modelo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Teste de modelo</h1>
+  <p>Protótipo para testar três coisas: variáveis com <strong>nome</strong> em vez de endereço de célula,
+     <strong>override</strong> em qualquer campo calculado, e um <strong>rascunho</strong> de contas livres.</p>
+</header>
+
+<div class="colunas">
+
+  <section class="painel">
+    <h2>Entradas</h2>
+    <p class="dica">Digite à vontade. Tudo recalcula na hora.</p>
+    <div id="entradas" class="painel-entradas"></div>
+  </section>
+
+  <section class="painel">
+    <h2>Calculados</h2>
+    <p class="dica">Pode digitar por cima de qualquer um. O campo fica amarelo e o <span class="mono">↺</span> devolve a fórmula.</p>
+    <div id="calculados" class="painel-calc"></div>
+  </section>
+
+</div>
+
+<section class="painel">
+  <h2>Rascunho</h2>
+  <p class="dica">
+    Uma conta por linha. Use <span class="mono">nome = conta</span> para reaproveitar o resultado nas linhas de baixo.
+    <strong>Clique no nome de qualquer campo acima</strong> para inserir a variável aqui.
+    Separe argumentos com <span class="mono">;</span> e use vírgula decimal, igual na planilha.
+  </p>
+  <div class="rascunho">
+    <textarea id="rascunho" spellcheck="false" rows="9"></textarea>
+    <div id="resultados"></div>
+  </div>
+</section>
+
+<section class="painel">
+  <h2>Funções disponíveis</h2>
+  <p class="dica" id="lista-funcoes"></p>
+  <p class="dica">Para criar uma função nova, adicione uma linha em <span class="mono">modelo.js</span>.</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjs@15.2.0/lib/browser/math.js"></script>
+<script src="modelo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
